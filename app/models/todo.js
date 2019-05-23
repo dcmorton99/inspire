@@ -6,11 +6,9 @@ export default class Todo {
     this.description = data.description
   }
 
-  get Template{
-    return `
-    
-    `
-  }
+
+
+}
 
 
 // {

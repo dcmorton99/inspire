@@ -23,6 +23,7 @@ export default class TodoController {
 		e.preventDefault()
 		var form = e.target
 		var todo = {
+			description: form.description.value,
 			// DONT FORGET TO BUILD YOUR TODO OBJECT
 		}
 
