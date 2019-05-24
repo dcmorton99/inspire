@@ -9,9 +9,11 @@ export default class Todo {
   get Template() {
     return `
     <div class="form-check">
-			<input class="form-check-input" type="checkbox" ${this.completed ? "checked" : ""}>
-			<label class="form-check-label">${this.description}</label>
-      <i class="fas fa-dumpster" onclick="app.controllers.todoController.delete('${this._id}')></i>
+			<input class="form-check-input" type="checkbox" ${this.completed ? "checked" : ""} onchange="app.controllers.todoController.toggleTodoStatus('${this._id}')">
+			<label class="form-check-label ${this.completed ? 'strike' : ''}">${this.description}</label>
+      <button class="btn" onclick="app.controllers.todoController.removeTodo('${this._id}')">
+        <i class="fas fa-dumpster")></i>
+      </button>
 		</div>
     `
   }

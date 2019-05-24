@@ -3,7 +3,6 @@ import TodoService from "./todo-service.js";
 const _todoService = new TodoService()
 
 function _drawTodos() {
-	debugger
 	let todos = _todoService.Todos
 	console.log("draw todos")
 	let template = ''
@@ -38,13 +37,12 @@ export default class TodoController {
 	}
 
 	toggleTodoStatus(todoId) {
-		// asks the service to edit the todo status
 		_todoService.toggleTodoStatus(todoId)
 	}
 
 	removeTodo(todoId) {
-		// ask the service to run the remove todo with this id
 		_todoService.removeTodo(todoId)
+
 	}
 
 
