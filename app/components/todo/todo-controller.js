@@ -3,7 +3,9 @@ import TodoService from "./todo-service.js";
 const _todoService = new TodoService()
 
 function _drawTodos() {
+	debugger
 	let todos = _todoService.Todos
+	console.log("draw todos")
 	let template = ''
 	todos.forEach(todo => {
 		template += todo.Template
@@ -26,9 +28,9 @@ export default class TodoController {
 
 	}
 
-	addTodo(e) {
-		e.preventDefault()
-		var form = e.target
+	addTodo(event) {
+		event.preventDefault()
+		var form = event.target
 		var todo = {
 			description: form.description.value,
 		}

@@ -28,11 +28,14 @@
 			<!-- what goes here??? -->
 		</div>
 
-		<div id="todos">
-			<form onsubmit="app.controllers.todoControllers.addTodo(e)">
+		<div>
+			<form onsubmit="app.controllers.todoController.addTodo(event)">
 				<input class="form-group" type="text" id="description" required placeholder="add your to-do">
-				<button>Add</button>
+				<button type="submit">add to do</button>
 			</form>
+			<div id="todos">
+
+			</div>
 
 		</div>
 

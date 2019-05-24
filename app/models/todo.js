@@ -11,7 +11,7 @@ export default class Todo {
     <div class="form-check">
 			<input class="form-check-input" type="checkbox" ${this.completed ? "checked" : ""}>
 			<label class="form-check-label">${this.description}</label>
-      <i class="fas fa-dumpster"></i>
+      <i class="fas fa-dumpster" onclick="app.controllers.todoController.delete('${this._id}')></i>
 		</div>
     `
   }
