@@ -29,6 +29,10 @@ export default class TodoService {
 		_subscribers[prop].push(fn)
 	}
 
+	get Todos() {
+		return _state.todos.map(t => new Todo(t))
+	}
+
 	getTodos() {
 		console.log("Getting the Todo List")
 		todoApi.get()
@@ -48,12 +52,11 @@ export default class TodoService {
 
 	toggleTodoStatus(todoId) {
 		let todo = _state.todos.find(todo => todo._id == todoId)
-		// Be sure to change the completed property to its opposite
-		// todo.completed = !todo.completed <-- THIS FLIPS A BOOL
+		todo.completed = !todo.completed
 
 		todoApi.put(todoId, todo)
 			.then(res => {
-				//DO YOU WANT TO DO ANYTHING WITH THIS?
+				this.getTodos()
 			})
 			.catch(err => _setState('error', err.response.data))
 	}

@@ -7,6 +7,8 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
 		integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+		integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 	<title>Inspire</title>
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -27,19 +29,15 @@
 		</div>
 
 		<div id="todos">
-			<button></button>
-			<form onsubmit="app.controllers.todoControllers.addTodo()">
-				<div class="form-check">
-					<input class="form-check-input" type="checkbox" value="">
-					<input class="form-group" type="text" id="description" required placeholder="add your to-do"
-						onsubmit="app.controllers.todoController.addTodo(e)">
-				</div>
+			<form onsubmit="app.controllers.todoControllers.addTodo(e)">
+				<input class="form-group" type="text" id="description" required placeholder="add your to-do">
+				<button>Add</button>
 			</form>
-		</div>
-	</div>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
-	<script type="module" src="app/main.js"></script>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+		<script type="module" src="app/main.js"></script>
 </body>
 
 </html>
