@@ -9,35 +9,38 @@
 		integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
 		integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Playball&display=swap" rel="stylesheet">
 	<title>Inspire</title>
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body class="h100 container-fluid" id="bg-image">
-	<div id="weather">
-		Your Weather Template
-	</div>
 
-	<div class="row">
-		<div class="col" id="quote">
 
+	<div class="row justify-content-center">
+		<div class="col-6 text-light font-weight-bold text-center" id="quote">
 		</div>
 	</div>
 
+	<div class="row text-light" id="weather">
 
-	<div>
+	</div>
+	<div class="col-3">
 		<div id="todo-error">
 		</div>
 
-		<div>
-			<form onsubmit="app.controllers.todoController.addTodo(event)">
-				<input class="form-group" type="text" id="description" required placeholder="add your to-do">
-				<button type="submit">add to do</button>
-			</form>
-			<div id="todos">
-
+		<div class="col">
+			<div class="card" id="quote-card">
+				<div class="card-body">
+					<form onsubmit="app.controllers.todoController.addTodo(event)">
+						<h5>To Do:</h5>
+						<input class="form-group" type="text" id="description" required placeholder="add your to-do">
+						<button class="btn" type="submit"><i class="fas fa-plus-square"></i></button>
+					</form>
+					<div id="todos">
+					</div>
+				</div>
 			</div>
-
 		</div>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>

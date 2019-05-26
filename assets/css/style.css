@@ -5,5 +5,18 @@
 
 .strike {
   text-decoration: line-through;
+}
 
+#bg-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#quote {
+  font-family: Playball;
+}
+
+#quote-card {
+background-color: rgb(179, 176, 176);
 }
