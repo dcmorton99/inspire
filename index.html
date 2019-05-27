@@ -17,18 +17,24 @@
 <body class="h100 container-fluid" id="bg-image">
 
 	<div class="row justify-content-between">
-		<div class="col-3 text-light" id="weather"></div>
+
+		<div class="col-3 p-3">
+			<div class="card" id="weather-card">
+				<div class="card-body" id="weather">
+				</div>
+			</div>
+		</div>
 
 		<div class="col-3 p-3" id="the-todos">
 			<div class="card" id="todo-card">
 				<div class="card-body">
-					<h5>To Do:</h5>
+					<h5>To-Dos: </h5>
+					<div id="todos">
+					</div>
 					<form onsubmit="app.controllers.todoController.addTodo(event)">
 						<input class="form-group" type="text" id="description" required placeholder="add your to-do">
 						<button class="btn" type="submit"><i class="fas fa-plus-square"></i></button>
 					</form>
-					<div id="todos">
-					</div>
 				</div>
 			</div>
 		</div>
