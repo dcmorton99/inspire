@@ -8,15 +8,26 @@
 }
 
 #bg-image {
+  width:  100%;
+  height: 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
 }
 
 #quote {
   font-family: Playball;
 }
 
+#todo-card {
+background:rgba(255,255,255,.6)
+}
+
 #quote-card {
-background-color: rgb(179, 176, 176);
+background:rgba(255,255,255,.5)
+}
+
+.footer {
+  bottom: 0%;
+  position: fixed;
 }

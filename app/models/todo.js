@@ -8,7 +8,7 @@ export default class Todo {
 
   get Template() {
     return `
-    <div class="form-check">
+    <div class="form-check form-check-inline">
 			<input class="form-check-input" type="checkbox" ${this.completed ? "checked" : ""} onchange="app.controllers.todoController.toggleTodoStatus('${this._id}')">
 			<label class="form-check-label ${this.completed ? 'strike' : ''}">${this.description}</label>
       <button class="btn" onclick="app.controllers.todoController.removeTodo('${this._id}')">

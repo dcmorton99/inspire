@@ -15,8 +15,4 @@ export default class WeatherController {
 		_weatherService.getWeather()
 	}
 
-	convertToCelsius() {
-
-	}
-
 }

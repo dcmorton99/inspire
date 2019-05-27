@@ -16,24 +16,14 @@
 
 <body class="h100 container-fluid" id="bg-image">
 
+	<div class="row justify-content-between">
+		<div class="col-3 text-light" id="weather"></div>
 
-	<div class="row justify-content-center">
-		<div class="col-6 text-light font-weight-bold text-center" id="quote">
-		</div>
-	</div>
-
-	<div class="row text-light" id="weather">
-
-	</div>
-	<div class="col-3">
-		<div id="todo-error">
-		</div>
-
-		<div class="col">
-			<div class="card" id="quote-card">
+		<div class="col-3 p-3" id="the-todos">
+			<div class="card" id="todo-card">
 				<div class="card-body">
+					<h5>To Do:</h5>
 					<form onsubmit="app.controllers.todoController.addTodo(event)">
-						<h5>To Do:</h5>
 						<input class="form-group" type="text" id="description" required placeholder="add your to-do">
 						<button class="btn" type="submit"><i class="fas fa-plus-square"></i></button>
 					</form>
@@ -42,9 +32,20 @@
 				</div>
 			</div>
 		</div>
+	</div>
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
-		<script type="module" src="app/main.js"></script>
+	<footer class="row align-items-end justify-content-center">
+		<div class="col-6 p-5">
+			<div class="card" id="quote-card">
+				<div class="card-body font-weight-bold text-center" id="quote">
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+	<script type="module" src="app/main.js"></script>
 </body>
 
 </html>
