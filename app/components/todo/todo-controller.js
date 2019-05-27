@@ -10,7 +10,7 @@ function _drawTodos() {
 		template += todo.Template
 		count = todos.length
 	})
-	document.getElementById('todo-count').innerHTML = `<h5>${count} To-dos</h5>`
+	document.getElementById('todo-count').innerHTML = `<h5>${count} To-do</h5>`
 	document.getElementById('todos').innerHTML = template
 }
 
