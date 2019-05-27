@@ -4,11 +4,13 @@ const _todoService = new TodoService()
 
 function _drawTodos() {
 	let todos = _todoService.Todos
-	console.log("draw todos")
 	let template = ''
+	let count = 0
 	todos.forEach(todo => {
 		template += todo.Template
+		count = todos.length
 	})
+	document.getElementById('todo-count').innerHTML = `<h5>${count} To-dos</h5>`
 	document.getElementById('todos').innerHTML = template
 }
 
@@ -34,6 +36,7 @@ export default class TodoController {
 			description: form.description.value,
 		}
 		_todoService.addTodo(todo)
+		form.reset()
 	}
 
 	toggleTodoStatus(todoId) {
